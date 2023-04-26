@@ -1,0 +1,124 @@
+body {
+  background-image: url('Camel Rides.jpg');
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+body::before {
+  content: '';
+  background-color: rgba(172, 217, 239, 0.3); /* transparent black */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  } /* adjust opacity as needed */
+h1 {
+  text-align: center;
+  border-top: 0;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  top: 70px;
+  font-weight: bolder;
+  font-family: cursive;
+}
+.nav-item{
+  margin-left: 3px;
+}
+.d-inline-block{
+  margin-right: 2px;
+}
+.search_img{
+  margin-right: 10px;
+}
+.navbar-brand{
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* set the height of the search container to 50% of the viewport height */
+}
+
+form {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 50px;
+  width: 500px;
+}
+
+input[type=text] {
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.lower_buttons{
+  width: 350px;
+  display: inline-flex;
+  height: 50px;
+  position: relative;
+  left: 200px;
+  background-color: rgba(172, 217, 239, 0.3);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.lower_buttons:hover{
+  background: rgba(140, 184, 205, 0.4);
+}
+.lower_buttons:active{
+  background: rgba(75, 161, 204, 0.5);
+}
+.button__text{
+  color: black;
+  font-family: monospace;
+  height: 100%;
+  padding: 5px 24px;
+}
+
+#button1{
+  background-image: url("images/tips.png");
+  background-repeat: no-repeat;
+  align-items:flex-end;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  height: 100%;
+}
+#button2{
+  background-image: url("images/tour gide.png");
+  background-repeat: no-repeat;
+  align-items:flex-end;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  height: 100%;
+}
+.button__arrow{
+  background-image: url("images/arrow.png");
+  background-repeat: no-repeat;
+  align-items:flex-end;
+  height: 100%;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  position: absolute;
+  margin-left: 250px;
+  margin-bottom: 10px;
+}
