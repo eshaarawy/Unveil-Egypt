@@ -4,17 +4,15 @@
   src: url('../fonts/NIAGSOL.TTF');
   font-family: 'Centaur';
   src: url('../fonts/CENTAUR.TTF');
-
 }
 
 body
 {
-  background-image: url('Camel Rides.jpg');
+  background-image: url('../images/Camel Rides.jpg');
   background-size: cover;
   position: relative;
   height: 100vh;
 }
-
 body::before
 {
   content: '';
@@ -25,6 +23,7 @@ body::before
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 
 /* adjust opacity as needed */
@@ -40,8 +39,6 @@ h1
   top: 150px;
   left: -70px;
   font-size: 30px;
-
-
 }
 
 .nav-item
@@ -82,21 +79,21 @@ h1
 form
 {
   display: flex;
-  align-items: 'center-Regular';
+  align-items: center;
   background-color: #f2f2f2;
   padding: 10px;
   border-radius: 50px;
   width: 500px;
 }
 
-input[type=text]
+input
 {
   padding: 10px;
   border: none;
   border-radius: 50px;
   width: 100%;
   margin-right: 10px;
-
+  cursor: text;
 }
 
 .lower_buttons
@@ -118,7 +115,7 @@ input[type=text]
 
 .lower_buttons:hover
 {
-  background: rgba(166, 202, 221, 0.3);
+  background: rgba(166, 202, 221, 0.5);
 }
 
 .lower_buttons:active
@@ -136,7 +133,7 @@ input[type=text]
 
 #button1
 {
-  background-image: url("images/tips.png");
+  background-image: url("../images/icons/tips.png");
   background-repeat: no-repeat;
   align-items: flex-end;
   background-size: 30px 30px;
@@ -148,7 +145,7 @@ input[type=text]
 
 #button2
 {
-  background-image: url("images/tour gide.png");
+  background-image: url("../images/icons/tour gide.png");
   background-repeat: no-repeat;
   align-items: flex-end;
   background-size: 30px 30px;
@@ -160,7 +157,7 @@ input[type=text]
 
 .button__arrow
 {
-  background-image: url("images/arrow.png");
+  background-image: url("../images/icons/arrow.png");
   background-repeat: no-repeat;
   align-items: flex-end;
   height: 100%;
