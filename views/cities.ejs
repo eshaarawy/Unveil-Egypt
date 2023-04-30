@@ -1,0 +1,39 @@
+<%- include('partials/header'); -%>
+
+    <!-- Search bar -->
+    <div class="search-container">
+      <span id="city_logo"></span>
+      <span id="city_text"><%= city %></span>
+      <span id="city_search"></span>
+      <span id="search_logo"></span>
+    </div>
+    <span id="search_line"></span>
+
+<!-- Cards -->
+  <div class="card-container">
+    <a href="#">
+    <div class="card">
+      <img src=<%="images/monuments/" + city + ".jpg" %> alt="Image 1">
+      <h2>Monuments</h2>
+    </div>
+    </a>
+    <a href="#">
+    <div class="card">
+      <img src=<%="images/activities/" + city + ".jpg" %> alt="Image 2">
+      <h2>Activities</h2>
+    </div>
+    </a>
+    <a href="#">
+    <div class="card">
+      <img src=<%="images/restaurants/" + city + ".jpg" %> alt="Image 3">
+      <h2>Restaurants</h2>
+    </div>
+    </a>
+  </div>
+<link rel="stylesheet" href="/css/cities.css">
+<style>
+		body {
+			background-image: url(<%= '../images/background/' + city + '.jpg' %>);
+		}
+	</style>
+<%- include('partials/footer'); -%>

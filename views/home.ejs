@@ -1,0 +1,37 @@
+<%- include('partials/header'); -%>
+
+<h1>Plan Your Dream Trip!</h1>
+<!-- Search Bar -->
+<div class="search-container">
+  <img src="images/icons/search.png" alt="Logo" width="50" height="50" class="search_img">
+  <form id="search-form" action="#" method="post">
+    <input type="text" id="search-input" name="city" placeholder="Search for Cities">
+    <input id="submit-btn" type="submit" style="display:none">
+  </form>
+</div>
+
+<!-- Lower Buttons -->
+<div>
+  <a href="#">
+  <button class="lower_buttons">
+    <span id="button1" class="button__icon"></span>
+    <span class="button__text"> Travel Tips </span>
+    <span class="button__arrow"></span>
+  </button>
+  </a>
+</div>
+
+<div>
+  <a href="#">
+  <button class="lower_buttons">
+    <span id="button2" class="button__icon"></span>
+    <span class="button__text">Request A Tour Guide</span>
+    <span class="button__arrow"></span>
+  </button>
+  </a>
+</div>
+<link rel="stylesheet" href="/css/home.css">
+<script src="main.js"></script>
+
+
+<%- include('partials/footer'); -%>

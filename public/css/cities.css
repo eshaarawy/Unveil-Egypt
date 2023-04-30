@@ -1,0 +1,143 @@
+@font-face
+{
+  font-family: 'Niagara Solid';
+  src: url('../fonts/NIAGSOL.TTF');
+  font-family: 'Centaur';
+  src: url('../fonts/CENTAUR.TTF');
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+body
+{
+  background-image: url(<%= '../images/Camel Rides.jpg'%>);
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+body::before
+{
+  content: '';
+  background-color: rgba(166, 202, 221, 0.6);
+  /* transparent black */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-item
+{
+  margin-left: 5px;
+  font-family: 'Centaur', serif;
+}
+
+.d-inline-block
+{
+  margin-right: 2px;
+}
+
+.navbar-brand
+{
+  font-family: 'Niagara Solid', cursive;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  font-size: 50px;
+}
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    position: relative;/* set the height of the search container to 50% of the viewport height */
+  }
+  #city_logo {
+    top: 252px;
+    left: 391px;
+    width: 40px;
+    height: 40px;
+    /* UI Properties */
+    background-image: url('../images/icons/CAiro.png');
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    opacity: 1;
+  }
+
+  #city_text {
+    /* Layout Properties */
+    top: 238px;
+    left: 449px;
+    width: 381px;
+    height: 55px;
+    /* UI Properties */
+    text-align: center;
+    font: normal normal bold 50px/55px Tw Cen MT;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
+  #search_line {
+    /* Layout Properties */
+    display: flex;
+    top: 330px;
+    left: 597px;
+    width: 494px;
+    height: 2px;
+    position: absolute;
+    /* UI Properties */
+    border: 2px solid #000000;
+    opacity: 1;
+  }
+
+#city_search {
+  top: 266px;
+  left: 848px;
+  width: 30px;
+  height: 30px;
+  /* UI Properties */
+  background: transparent url('../images/icons/search.png') 0% 0% no-repeat padding-box;
+  background-size: 30px 30px;
+  opacity: 1;
+}
+.card-container {
+  display: flex;
+  position: absolute;
+  top: 380px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card {
+  margin: 0 8px;
+  text-align: center;
+  background: transparent;
+  border: none;
+}
+
+.card img {
+  width: 324px;
+  height: 241px;
+  border: 1px solid #9BA4B5;
+  border-radius: 36px;
+  opacity: 0.85;
+}
+
+.card h2 {
+  margin-top: 8px;
+  text-align: center;
+  font-family: 'Centaur', serif;
+  font-size: 50px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
