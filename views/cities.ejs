@@ -13,19 +13,19 @@
   <div class="card-container">
     <a href="#">
     <div class="card">
-      <img src=<%="images/monuments/" + city + ".jpg" %> alt="Image 1">
+      <img src=<%="images/monuments/" + city_path + ".jpg" %> alt="Image 1">
       <h2>Monuments</h2>
     </div>
     </a>
     <a href="#">
     <div class="card">
-      <img src=<%="images/activities/" + city + ".jpg" %> alt="Image 2">
+      <img src=<%="images/activities/" + city_path + ".jpg" %> alt="Image 2">
       <h2>Activities</h2>
     </div>
     </a>
     <a href="#">
     <div class="card">
-      <img src=<%="images/restaurants/" + city + ".jpg" %> alt="Image 3">
+      <img src=<%="images/restaurants/" + city_path + ".jpg" %> alt="Image 3">
       <h2>Restaurants</h2>
     </div>
     </a>
@@ -33,7 +33,9 @@
 <link rel="stylesheet" href="/css/cities.css">
 <style>
 		body {
-			background-image: url(<%= '../images/background/' + city + '.jpg' %>);
+			background-image: url(<%= '../images/background/' + city_path + '.jpg' %>);
 		}
+    #city_logo {
+      background-image: url(<%= '../images/icons/cities/' + city_path + '.png' %>);
 	</style>
 <%- include('partials/footer'); -%>

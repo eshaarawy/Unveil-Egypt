@@ -13,7 +13,13 @@ app.get("/", function (req, res) {
 });
 
 app.get("/city", function(req, res){
-  res.render("cities", {city: city});
+	if (city == "Luxor & Aswan")
+		city_path = "Luxor";
+	else {
+		city_path = city;
+	}
+	res.render("cities", {city: city, city_path: city_path});
+
 })
 
 

@@ -59,13 +59,33 @@ body::before
     height: 50vh;
     position: relative;/* set the height of the search container to 50% of the viewport height */
   }
+  form
+  {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50px;
+    width: 500px;
+  }
+
+  input
+  {
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    margin-right: 10px;
+    cursor: text;
+    border: none;
+  }
   #city_logo {
     top: 252px;
     left: 391px;
     width: 40px;
     height: 40px;
     /* UI Properties */
-    background-image: url('../images/icons/CAiro.png');
     background-repeat: no-repeat;
     background-size: 40px 40px;
     opacity: 1;
@@ -73,6 +93,7 @@ body::before
 
   #city_text {
     /* Layout Properties */
+    background-color: transparent;
     top: 238px;
     left: 449px;
     width: 381px;
@@ -82,6 +103,7 @@ body::before
     font: normal normal bold 50px/55px Tw Cen MT;
     letter-spacing: 0px;
     color: #000000;
+    color: black;
     opacity: 1;
   }
 
