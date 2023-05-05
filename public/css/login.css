@@ -1,0 +1,154 @@
+@font-face
+{
+  font-family: 'Niagara Solid';
+  src: url('../fonts/NIAGSOL.TTF');
+  font-family: 'Centaur';
+  src: url('../fonts/CENTAUR.TTF');
+
+}
+
+body {
+	background-image: url('../images/Camel Rides.jpg');
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+body::before
+{
+  content: '';
+  background-color: rgba(166, 202, 221, 0.20);
+  /* transparent black */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+
+header {
+	background-color: #e6e6e6;
+	padding: 20px;
+	text-align: center;
+	opacity: 75%;
+}
+
+.logo {
+	display: inline-block;
+  z-index: auto;
+}
+
+.logo img {
+	padding-top: 30px;
+	height: 70px;
+	vertical-align: middle;
+}
+
+.logo h1 {
+	display: inline-block;
+	margin: 0;
+	padding-left: 10px;
+	padding-top: 30px;
+	vertical-align: middle;
+	font-size: 34px;
+}
+
+main {
+	background-color: #e6e6e6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	opacity: 75%;
+}
+
+.cover-background {
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.login-box {
+	background-color: #fff;
+	padding: 40px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	text-align: center;
+}
+
+.login-box h2 {
+	margin-top: 0;
+}
+
+.login-box form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-box label {
+	margin-top: 10px;
+}
+
+.login-box input {
+	padding: 10px;
+	border-radius: 5px;
+	border: black solid;
+	margin-top: 5px;
+}
+
+.login-box button {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.login-box button:hover {
+	background-color: #0069d9;
+}
+
+.login-box p {
+	margin-top: 20px;
+}
+
+.login-box a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.login-box a:hover {
+	text-decoration: underline;
+}
+
+.social-login {
+	margin-top: 20px;
+}
+
+.social-login p {
+	margin-bottom: 10px;
+}
+
+.social-login a {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.social-login img {
+	height: 30px;
+}

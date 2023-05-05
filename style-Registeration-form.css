@@ -1,0 +1,144 @@
+@font-face
+{
+  font-family: 'Niagara Solid';
+  src: url('../fonts/NIAGSOL.TTF');
+  font-family: 'Centaur';
+  src: url('../fonts/CENTAUR.TTF');
+
+}
+
+body {
+	background: url('public/Images/Camel Rides.jpg') no-repeat fixed center;
+	background-size: cover;
+	position: relative;
+	height: 100vh;
+
+}
+
+
+
+header {
+	background-color: #e6e6e6;
+	padding: 20px;
+	text-align: center;
+	opacity: 0.6;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.logo img {
+	padding-top: 30px;
+	height: 70px;
+	vertical-align: middle;
+}
+
+.logo h1 {
+	display: inline-block;
+	margin: 0;
+	padding-left: 10px;
+	padding-top: 30px;
+	vertical-align: middle;
+	font-size: 34px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+form {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+.form-group.row {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.form-group.row .col {
+	flex: 1;
+	margin-right: 10px;
+}
+
+.form-group.row .col:last-child {
+	margin-right: 0;
+}
+
+#birthday {
+	margin-top: 30px;
+}
+
+#gender {
+	margin-top: 20px;
+}
+
+label {
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+select {
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+input[type="file"] {
+	margin-top: 5px;
+}
+
+
+.save_button:hover
+{
+  background: rgba(0, 0, 0, 1.0);
+}
+
+.save_button:active
+{
+  background: rgba(0, 0, 0, 1.0);
+}
+.button__text
+{
+  color: white;
+  font-family: 'Centaur', serif;
+  height: 100%;
+  padding: 5px 24px;
+}
+
+.save_button
+{
+  width: 350px;
+  display: inline-flex;
+  height: 60px;
+  position: relative;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 1.0);
+  color: black;
+  border: none;
+  padding: 10px 10px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  vertical-align: middle;
+
+}
