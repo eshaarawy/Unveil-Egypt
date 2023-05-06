@@ -34,6 +34,13 @@ app.get("/register", function(req, res){
 	res.render("register");
 })
 
+app.get("/register/tourguide", function(req, res){
+	res.render("tour-guide");
+})
+
+app.get("/register/tourist", function(req, res){
+	res.render("tourist");
+})
 app.post("/", function(req, res){
   city = req.body.city;
   res.redirect("/city");
