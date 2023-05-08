@@ -175,28 +175,7 @@ main {
 main div{
     text-align:center
 }
-/*
-.z {
-    padding-top: 45px;
-    padding-left: 60px;
-    width: 231px;
-    font: normal normal bold 30px/33px Tw Cen MT;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.4;
-    text-align:left;
-}
-.x {
-    margin-top: 37px;
-    padding-left: 90px;
-    width: 306px;
-    text-align: left;
-    font: normal normal bold 30px/33px Tw Cen MT;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.4;
-}
-*/
+
 .container {
   text-align: center;
 }
@@ -217,28 +196,6 @@ main div{
     cursor: pointer;
 }
 
-/*
-.c {
-    padding-top: 37px;
-    padding-left: 100px;
-    width: 306px;
-    text-align: left;
-    font: normal normal bold 30px/33px Tw Cen MT;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.4;
-}
-.v {
-    padding-top: 37px;
-    padding-left: 130px;
-    width: 231px;
-    text-align: left;
-    font: normal normal bold 30px/33px Tw Cen MT;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.4;
-}
-*/
 .r {
     text-align:center;
     display: flex;
@@ -246,8 +203,6 @@ main div{
     margin-bottom :8px;
     width:auto;
     justify-content:center;
-
-
 }
 .f {
     font: normal normal bold 30px/33px Tw Cen MT;

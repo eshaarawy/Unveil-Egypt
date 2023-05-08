@@ -1,0 +1,117 @@
+@font-face
+{
+  font-family: 'Niagara Solid';
+  src: url('../fonts/NIAGSOL.TTF');
+  font-family: 'Centaur';
+  src: url('../fonts/CENTAUR.TTF');
+
+}
+
+body {
+  background-image: url('Images/Camel_Rides.jpg');
+    background-size: cover;
+    position: relative;
+    margin: 0;
+  padding: 0;
+}
+body::before
+{
+  content: '';
+  background-color: rgba(255, 255, 255, 0.80);
+  /* transparent black */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+header {
+  background-color: #e6e6e6;
+  padding: 20px;
+  text-align: center;
+  opacity: 0.2;
+}
+
+.header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.headline {
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  padding-top: 100;
+  font-weight: bold;
+  position: relative;
+
+
+}
+
+p {
+  font-size: 20px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  margin: 0;
+}
+
+main {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.row {
+  display: table-row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.text {
+  flex-basis: calc(25% - 20px);
+  position: relative;
+}
+
+.text img {
+  width: 2%;
+  height: auto;
+}
+
+.rating {
+  position: absolute;
+  bottom: -35px;
+  right: -100px;
+}
+
+.star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star:hover,
+.star.active {
+  color: #ffcc00;
+}

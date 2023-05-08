@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/Registration-form.css">
+</head>
+<body>
+	<header>
+		<a href="/">
+		<div class="logo">
+			<img src="../images/icons/logo.png" alt="Company Logo">
+			<h1>Unveil Egypt</h1>
+		</div>
+	</a>
+	</header>
+	<div class="cover-background"></div>
+	<div class="container">
+		<form id="registration-form">
+			<div class="form-group">
+				<div id="options">
+					<input type="radio" id="beginner" name="options" value="beginner" required>
+					<label for="beginner">Beginner</label>
+					<input type="radio" id="professional" name="options" value="professional" required>
+					<label for="professional">Professional</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col">
+					<label for="first-name">First Name</label>
+					<input type="text" id="first-name" name="first-name" required>
+				</div>
+				<div class="col">
+					<label for="last-name">Last Name</label>
+					<input type="text" id="last-name" name="last-name" required>
+				</div>
+				<div class="col">
+					<label for="gender">Gender</label>
+					<select id="gender" name="gender" required>
+						<option value="">Select Gender</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col">
+					<label for="birthday">Birthday</label>
+					<input type="date" id="birthday" name="birthday" required>
+				</div>
+				<div class="col">
+					<label for="prefix">Prefix</label>
+					<input type="text" id="prefix" name="prefix" required>
+				</div>
+				<div class="col">
+					<label for="phone-number">Phone Number</label>
+					<input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" required>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col">
+					<label for="languages">Number of Languages Spoken</label>
+					<input type="number" id="languages" name="languages" min="1" required>
+				</div>
+				<div class="col">
+					<label for="salary">Expected Salary per Hour</label>
+					<input type="number" id="salary" name="salary" required>
+				</div>
+				<div class="col">
+						<label for="experience">Years of Experience</label>
+						<select id="experience" name="experience" required>
+							<option value="">Select Years of Experience</option>
+							<option value="0-1">0-1 years</option>
+							<option value="1-3">1-3 years</option>
+							<option value="3-5">3-5 years</option>
+							<option value="5+">5+ years</option>
+						</select>
+				</div>
+				<div class="col">
+					<label for="location">Where will you work?</label>
+					<input type="text" id="location" name="location" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="profile-photo">Profile Photo</label>
+				<input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
+			</div>
+				<div class="col-lg-12 row justify-content-center">
+					<button class="save_button justify-content-center">Save</button>
+				</div>
+
+		</form>
+	</div>
+	<script src="reg.js"></script>
+</body>
+</html>
