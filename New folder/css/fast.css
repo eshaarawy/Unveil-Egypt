@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url('Images/Camel_Rides.jpg');
+  background-image: url('../images/Camel Rides.jpg');
     background-size: cover;
     position: relative;
     margin: 0;
@@ -34,7 +34,7 @@ header {
 }
 
 .header {
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;*/
   padding: 20px;
   position: fixed;
   top: 0;
@@ -47,15 +47,14 @@ header {
   font-size: 40px;
   color: black;
   text-align: center;
-  padding-top: 100;
+  padding-top: 10px;
   font-weight: bold;
   position: relative;
-
-
 }
 
 p {
   font-size: 20px;
+  margin-right: 15px;
 }
 
 .logo {
@@ -82,29 +81,30 @@ main {
 }
 
 .row {
-  display: table-row;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-bottom: 20px;
-  margin-top: 20px;
+  display: inline-grid;
+  alignment: center;
+  width: 1200px;
+
 }
 
 .text {
-  flex-basis: calc(25% - 20px);
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .text img {
   width: 2%;
   height: auto;
+  margin-right: 15px;
 }
 
-.rating {
+.rating{
   position: absolute;
-  bottom: -35px;
-  right: -100px;
+  right: 0;
+  bottom: -5px;
 }
-
 .star {
   font-size: 30px;
   color: #ccc;

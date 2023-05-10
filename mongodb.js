@@ -74,7 +74,7 @@ const guideSchema = new mongoose.Schema({
   }
 });
 
-const guideSchema = new mongoose.Schema({
+const rateSchema = new mongoose.Schema({
   place: {
     type: String,
     required: true
