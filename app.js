@@ -235,21 +235,16 @@ app.post("/explore", function(req, res){
 	const salary = req.body.salary;
 	const age = req.body.age;
 	const city = req.body.City;
-	const preferredGender = req.body['Preferred gender'];
+	const preferredGender = req.body.gender;
 	const language = req.body.language;
 
 	// Construct a MongoDB query based on the form data
 	const query = {};
-	if (salary) query.salary = { $lte: salary}
-	if (age) query.age = age;
 	if (city) query.residence = city;
 	if (preferredGender) query.gender = preferredGender;
-	if (language) query.language = language;
 
-	tour.find({
-	      residence: "Cairo",
-	    }).then((data) => {
-				console.log(data);
+	tour.find(query).then((data) => {
+				res.render("data", {results: data, username: username, signed: signed})
 			})
 });
 

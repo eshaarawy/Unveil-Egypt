@@ -11,7 +11,7 @@
         <button class="t"> Beginner Tour Guide</button>
       </div>
         <div id="form">
-            <form class="row d-flex justify-content-center" action="">
+            <form class="row d-flex justify-content-center" action="/explore" method="post">
               <div class=col-lg-2>
                 <label class="first" for="salary">Salary in $</label>
                 <input class="n1" type="number" name="salary" id="salary"  placeholder="Payment range"  />
@@ -29,21 +29,20 @@
                   <option id="Choose city" value="Dahab"> Dahab</option>
                   <option id="Choose city" value="Sharm El-Sheikh"> Sharm El-Sheikh</option>
                   <option id="Choose city" value="Luxor & Aswan"> Luxor & Aswan</option>
-
                 </select>
-    
+
               </div>
               <div class="col-lg-2">
                 <label class="gender">Gender</label>
-                <select required class="confirmbox">
-                    <option disabled selected value value="">Preferred gender</option>
+                <select class="confirmbox" name="gender">
+                    <option disabled selected value="">Preferred gender</option>
                     <option id="Preferred gender" value="male">male</option>
                     <option id="Preferred gender" value="female">female</option>
                 </select>
               </div>
               <div class="col-lg-2">
                 <label class="confirm" for="language">Language</label>
-                <select required class="genderbox">
+                <select class="genderbox">
                     <option disabled selected value="">Preferred Language</option>
                     <option id="language" value="english">English</option>
                     <option id="language" value="arabic">German</option>
