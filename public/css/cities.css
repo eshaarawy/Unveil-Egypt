@@ -36,7 +36,9 @@ body::before
 .nav-item
 {
   margin-left: 5px;
+  margin-top: 12px;
   font-family: 'Centaur', serif;
+  font-size: 22px;
 }
 
 .d-inline-block
@@ -53,7 +55,7 @@ body::before
   font-size: 50px;
 }
   .search-container {
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
@@ -107,18 +109,19 @@ body::before
     opacity: 1;
   }
 
-  #search_line {
-    /* Layout Properties */
-    display: flex;
-    top: 330px;
-    left: 597px;
-    width: 494px;
-    height: 2px;
-    position: absolute;
-    /* UI Properties */
-    border: 2px solid #000000;
-    opacity: 1;
-  }
+#search_line
+{
+  /* Layout Properties */
+  display: flex;
+  top: 330px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 494px;
+  height: 2px;
+  position: absolute;
+  /* UI Properties */
+  border: 2px solid #000000;
+}
 
 #city_search {
   top: 266px;

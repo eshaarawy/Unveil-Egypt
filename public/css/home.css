@@ -6,8 +6,7 @@
   src: url('../fonts/CENTAUR.TTF');
 }
 
-body
-{
+body {
   background-image: url('../images/Camel Rides.jpg');
   background-size: cover;
   position: relative;
@@ -25,10 +24,12 @@ body::before
   right: 0;
   z-index: -1;
 }
-
-/* adjust opacity as needed */
-h1
+header
 {
+  height: 150px;
+}
+/* adjust opacity as needed */
+h1 {
   text-align: center;
   border-top: 0;
   font-family: 'Centaur', serif;
@@ -41,10 +42,11 @@ h1
   font-size: 30px;
 }
 
-.nav-item
-{
+.nav-item {
   margin-left: 5px;
+  margin-top: 12px;
   font-family: 'Centaur', serif;
+  font-size: 22px;
 }
 
 .d-inline-block
@@ -63,7 +65,7 @@ h1
   font-style: normal;
   font-weight: 400;
   color: white;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .search-container
@@ -128,6 +130,7 @@ input
 {
   color: black;
   font-family: 'Centaur', serif;
+  font-size: 20px;
   height: 100%;
   padding: 5px 24px;
 }

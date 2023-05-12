@@ -1,29 +1,33 @@
 <%- include('partials/header'); -%>
 
+      <div class="circleArrow">
+        <img src="../images/icons/circle.png" alt="circle" width="70" height="70" />
+      </div>
     <main>
       <div class="col-lg-6">
-        <button class="r">Professional Tour Guide</button>
+        <button class="r" selected>Professional Tour Guide</button>
       </div>
       <div class="col-lg-6">
-        <button class="t"> Begginer Tour Guide</button>
+        <button class="t"> Beginner Tour Guide</button>
       </div>
         <div id="form">
             <form class="row d-flex justify-content-center" action="">
               <div class=col-lg-2>
                 <label class="first" for="salary">Salary</label>
-                <input class="n1" type="number" name="salary" id="salary" min="100" max="1000" step="10" placeholder="Payment range" required />
+                <input class="n1" type="number" name="salary" id="salary"  placeholder="Payment range"  />
               </div>
               <div class=col-lg-2>
-                <label class="last" for="age">age</label>
-                <input class="n2" type="number" name="age" id="age" min="10" placeholder="Age range" required />
+                <label class="last" for="age">Age</label>
+                <input class="n2" type="number" name="age" id="age" min="10" placeholder="Age range" />
               </div>
               <div class="col-lg-2">
                 <label class="email" for="city">City</label>
                 <input class="emailbox" type="search" name="City" id="city" required placeholder="Choose City" />
               </div>
               <div class="col-lg-2">
-                <label class="gender">Preferred gender</label>
+                <label class="gender">Gender</label>
                 <select required class="confirmbox">
+                    <option disabled selected value value="">Preferred gender</option>
                     <option id="Preferred gender" value="male">male</option>
                     <option id="Preferred gender" value="female">female</option>
                 </select>
@@ -31,12 +35,14 @@
               <div class="col-lg-2">
                 <label class="confirm" for="language">Language</label>
                 <select required class="genderbox">
+                    <option disabled selected value="">Preferred Language</option>
                     <option id="language" value="english">English</option>
-                    <option id="language" value="arabic">Arabic</option>
+                    <option id="language" value="arabic">German</option>
+                    <option id="language" value="arabic">French</option>
                 </select>
               </div>
               <div class="row justify-content-center">
-                <button class="reg"> Register </button>
+                <button class="exp"> Explore </button>
               </div>
             </form>
         </div>

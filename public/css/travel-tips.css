@@ -43,9 +43,12 @@ h1 {
     font-size: 30px;
 }
 
-.nav-item {
+.nav-item 
+{
     margin-left: 5px;
+    margin-top: 12px;
     font-family: 'Centaur', serif;
+    font-size: 22px;
 }
 
 .d-inline-block {
@@ -61,7 +64,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .search-container {
@@ -108,17 +111,18 @@ input {
     vertical-align: middle;
 }
 
-    .lower_buttons:hover {
-        background: rgba(166, 202, 221, 0.5);
-    }
+.lower_buttons:hover {
+    background: rgba(166, 202, 221, 0.5);
+}
 
-    .lower_buttons:active {
-        background: rgba(166, 202, 221, 0.3);
-    }
+.lower_buttons:active {
+    background: rgba(166, 202, 221, 0.3);
+}
 
 .button__text {
     color: black;
     font-family: 'Centaur', serif;
+    font-size: 20px;
     height: 100%;
     padding: 5px 24px;
 }
@@ -163,7 +167,7 @@ input {
 
 main {
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
+    border: 1px solid white;
     border-radius: 62px;
     opacity: 0.8;
     left: 0px;
@@ -186,23 +190,23 @@ main div{
   padding-right: 30px;
   font: normal normal bold 30px/33px Tw Cen MT;
   letter-spacing: 0px;
-  color: #000000;
-  opacity: 0.4;
 }
-.common:active{
-    opacity: 1;
+.black-text
+{
+    color: black;
 }
 .common:hover{
     cursor: pointer;
 }
 
-.r {
-    text-align:center;
+.r
+{
+    text-align: center;
     display: flex;
     left: 50%;
-    margin-bottom :8px;
-    width:auto;
-    justify-content:center;
+    margin-bottom: 8px;
+    width: auto;
+    justify-content: center;
 }
 .f {
     font: normal normal bold 30px/33px Tw Cen MT;
