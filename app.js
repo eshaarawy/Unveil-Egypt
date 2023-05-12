@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const {tourist, tour, rate} = require("./mongodb");
 const {historical, souv, traditional, fancy, religious, park, nile, folk, fast} = require("./text");
-const Swal = require('sweetalert2');
 let alert = require('alert');
 
 const app = express();
@@ -33,143 +32,128 @@ app.get("/city", function(req, res){
 	else {
 		city_path = city;
 	}
-	res.render("cities", {city: city, city_path: city_path});
+	res.render("cities", {username: username, signed: signed, city: city, city_path: city_path});
 })
 
 app.get("/activities", function(req, res){
-	res.render("activities");
+	res.render("activities", {signed: signed, username: username});
 })
 
 app.get("/monuments", function(req, res){
-	res.render("monuments");
+	res.render("monuments", {signed: signed, username: username});
 })
 
 app.get("/historical-monuments", function(req, res){
 	res.render("text", {
 		title: "Historical Monuments",
-		listItems: historical
+		listItems: historical,
+		username: username,
+		signed: signed
 	})
-})
+});
 
 app.get("/religious-monuments", function(req, res){
 	res.render("text", {
 		title: "Religious Monuments",
-		listItems: religious
+		listItems: religious,
+		username: username,
+		signed: signed
 	})
 })
 
 app.get("/nile", function(req, res){
 	res.render("text", {
 		title: "Nile River Cruising",
-		listItems: nile
+		listItems: nile,
+		username: username,
+		signed: signed
 	})
 })
 
 app.get("/sovenirs", function(req, res){
 	res.render("text", {
 		title: "Sovenirs",
-		listItems: souv
+		listItems: souv,
+		username: username,
+		signed: signed
 	})
-})
+});
 
 app.get("/parks", function(req, res){
 	res.render("text", {
 		title: "Visiting Parks",
-		listItems: park
+		listItems: park,
+		username: username,
+		signed: signed
 	})
 })
 
 app.get("/folks", function(req, res){
 	res.render("text", {
 		title: "Attending Folks Shows",
-		listItems: folk
+		listItems: folk,
+		username: username,
+		signed: signed
 	})
 })
 
 app.get("/fancy", function(req, res){
 	res.render("text", {
 		title: "Fancy Food",
-		listItems: fancy
+		listItems: fancy,
+		username: username,
+		signed: signed
 	})
 })
 
 app.get("/fast", function(req, res){
 	res.render("text", {
 		title: "Fast Food",
-		listItems: fast
+		listItems: fast,
+		username: username,
+		signed: signed
 	})
 })
-app.get("/restaurants", function(req, res){
-	res.render("rest-slider")
-})
+
 app.get("/traditional", function(req, res){
 	res.render("text", {
 		title: "Traditional Food",
-		listItems: traditional
+		listItems: traditional,
+		username: username,
+		signed: signed
 	})
 })
 
-app.get("/city/restaurants", function(req, res){
-	res.render("rest-slider");
+app.get("/restaurants", function(req, res){
+	res.render("rest-slider", {signed: signed, username: username});
 })
-
-app.get("/history", function(req, res){
-	res.render("His-text");
-})
-
-app.get("/fancy", function(req, res){
-	res.render("fancy");
-})
-
-app.get("/fast", function(req, res){
-	res.render("fast");
-});
-
-app.get("/traditional", function(req, res){
-	res.render("rest-text");
-});
-
-app.get("/folk", function(req, res){
-	res.render("folk");
-});
-
-app.get("/nile", function(req, res){
-	res.render("Nile-text");
-});
-
-app.get("/souvenirs", function(req, res){
-	res.render("souv");
-});
-
-app.get("/park", function(req, res){
-	res.render("park");
-});
-app.get("/religious", function(req, res){
-	res.render("Rel-text");
-});
 
 app.get("/travel-tips", function(req, res){
-	res.render("travel-tips");
+	res.render("travel-tips", {signed: signed, username: username});
 })
 
 app.get("/login", function(req, res){
-	res.render("login");
+	res.render("login", {signed: signed, username: username});
 })
 
 app.get("/register", function(req, res){
-	res.render("register");
+	res.render("register", {signed: signed, username: username});
 })
 
 app.get("/register/tourguide", function(req, res){
-	res.render("tour-guide");
+	res.render("tour-guide", {signed: signed, username: username});
 })
 
 app.get("/register/tourist", function(req, res){
-	res.render("tourist");
+	res.render("tourist", {signed: signed, username: username});
 })
 
 app.get("/request-guide", function(req, res){
-	res.render("explore", {signed: signed, username: username});
+	if (signed)
+		res.render("explore", {signed: signed, username: username});
+	else {
+		res.render("login", {signed: signed, username: username})
+	}
 })
 
 app.get("/signout", function(req, res){
@@ -206,7 +190,7 @@ app.post("/guide-signup", async(req, res)=>{
 	}
 
 	await tour.insertMany([data])
-	res.render("Registration-form");
+	res.render("home", {signed: signed, username: username});
 })
 
 app.post("/login", async (req, res)=>{
@@ -214,20 +198,16 @@ app.post("/login", async (req, res)=>{
 		const check= await tourist.findOne({mail: req.body.mail})
 
 		if (check.password === req.body.password){
-			console.log("Signed in successfully.");
 			username = check.first;
 			signed = true;
 			res.redirect("/");
 		}
 		else {
-			console.log("Else")
 			alert("Wrong Password")
 		}
 	}
 	catch {
-		Swal.fire(
-				"Wrong Details"
-			);
+		alert("Wrong Details");
 	}
 })
 

@@ -111,3 +111,8 @@ main {
 .star.active {
   color: #ffcc00;
 }
+
+#rate {
+  color: black;
+  margin-left: 30px;  
+}
