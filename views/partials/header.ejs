@@ -21,7 +21,15 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
             <a class="navbar nav-item nav-link active" href="/login">
               <img src="images/icons/acc.png" alt="Logo" width="24" height="20" class="d-inline-block align-text-top">
-              Sign-in
+              <% if (signed) { %>
+              <a class="navbar nav-item nav-link active" href="#">
+                <%= username %>
+              </a>
+            <% } else { %>
+              <a class="navbar nav-item nav-link active" href="/login">
+                Sign-in
+              </a>
+            <% } %>
             </a>
             <a class="navbar nav-item nav-link active" href="#">
               <img src="images/icons/language.png" alt="Logo" width="15" height="15" class="d-inline-block align-text-top">
@@ -31,7 +39,12 @@
               <img src="images/icons/contact.png" alt="Logo" width="20" height="17" class="d-inline-block align-text-top">
                Contact Us
             </a>
-
+            <% if (signed) { %>
+            <a class="navbar nav-item nav-link active" href="/signout">
+              <img src="images/icons/logout.png" alt="Logo" width="20" height="17" class="d-inline-block align-text-top">
+              Log Out
+            </a>
+          <% } %>
           </ul>
         </div>
       </div>
