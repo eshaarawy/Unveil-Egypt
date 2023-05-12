@@ -8,10 +8,12 @@
 }
 
 body {
-	background-image: url('../images/Camel Rides.jpg');
+  background-image: url('../images/Camel Rides.jpg');
   background-size: cover;
   position: relative;
   height: 100vh;
+  height: auto;
+  width: auto;
 }
 
 body::before
@@ -26,63 +28,46 @@ body::before
   right: 0;
   z-index: -1;
 }
+header
+{
+	text-align: center;
+	font-family: 'Niagara Solid', cursive;
+	color: white;
+}
 
+main
+{
+	height: 100%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 75%;
+}
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 a:hover {
   text-decoration: none;
-}
-
-header {
-	background-color: #e6e6e6;
-	padding: 20px;
-	text-align: center;
-	opacity: 75%;
-}
-
-.logo {
-	display: inline-block;
-  z-index: auto;
+  color: white;
 }
 
 .logo img {
 	padding-top: 30px;
-	height: 70px;
 	vertical-align: middle;
 }
 
 .logo h1 {
 	display: inline-block;
-	margin: 0;
 	padding-left: 10px;
-	padding-top: 30px;
+	padding-top: 40px;
 	vertical-align: middle;
-	font-size: 34px;
+	font-size: 60px;
 }
 
-main {
-	background-color: #e6e6e6;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	opacity: 75%;
-}
-
-.cover-background {
-	background-size: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
 
 .login-box {
-	background-color: #fff;
 	padding: 40px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.3);
 	border-radius: 5px;

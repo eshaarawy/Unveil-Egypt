@@ -4,29 +4,29 @@
     font-family: 'Centaur';
     src: url(fonts/CENTAUR.TTF);
 }
-html {
-    background: #A6D0DD 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    opacity: 0.7;
-}
 
 body {
     background-image: url('../images/Camel Rides.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+    background-repeat:no-repeat;
+}
+body::before
+{
+  content: '';
+  background-color: rgba(166, 202, 221, 0.20);
+  /* transparent black */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
-    body::before {
-        background: #9E6F21 0% 0% no-repeat padding-box;
-        border: 1px solid #707070;
-        opacity: 0.15;
-    }
-
-header {
-    height: auto;
-    margin-bottom:10px;
+header{
+    height:150px;
 }
-
 
 /* adjust opacity as needed */
 h1 {
@@ -42,11 +42,13 @@ h1 {
     font-size: 30px;
 }
 
-.nav-item {
+.nav-item
+{
     margin-left: 5px;
+    margin-top: 12px;
     font-family: 'Centaur', serif;
+    font-size: 22px;
 }
-
 .d-inline-block {
     margin-right: 2px;
 }
@@ -60,7 +62,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .search-container {
@@ -150,20 +152,22 @@ input {
     margin-bottom: 10px;
 }
 main {
-    height: 562px;
+    height: 700px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     border-radius: 62px;
-    opacity:0.75;
+    top: 146px;
+    
+    
 }
 
-.reg {
-  margin-top: 85px;
+
+.exp {
+    margin-top: 85px;
     text-align: center;
     font: normal normal normal 40px/45px Centaur;
     letter-spacing: 0px;
     color: #FFFFFF;
-    opacity: 1;
     background-color: black;
     width: 170px;
     height: 48px;
@@ -307,6 +311,7 @@ q::selection{
   margin-top: 20px;
 }
 .r{
+    background-color: transparent;
     width: 320px;
     height: 33px;
     font: normal normal bold 30px/33px Tw Cen MT;
@@ -316,13 +321,23 @@ q::selection{
     align-items: center;
 }
 .t{
-  text-align: center;
-  justify-content: center;
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
     width: 306px;
     height: 33px;
     font: normal normal bold 30px/33px Tw Cen MT;
     opacity:0.4;
     border:none;
+}
+.circleArrow
+{
+    text-align: center;
+    display: flex;
+    left: 50%;
+    margin-bottom: 8px;
+    width: auto;
+    justify-content: center;
 }
 .active {
     opacity:1;
@@ -331,5 +346,7 @@ q::selection{
 
 }
 .col-lg-2 {
+  font:  Centaur;
   margin-top: 117px;
+
 }
