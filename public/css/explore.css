@@ -307,6 +307,7 @@ q::selection{
     opacity:1;
 }
 .col-lg-6 {
+
   text-align: center;
   margin-top: 20px;
 }
@@ -346,7 +347,8 @@ q::selection{
 
 }
 .col-lg-2 {
-  font:  Centaur;
+  font: normal normal normal 25px/28px Baskerville Old Face;
+  font-size: 20px;
   margin-top: 117px;
 
 }

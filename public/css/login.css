@@ -1,48 +1,51 @@
 @font-face
 {
-  font-family: 'Niagara Solid';
-  src: url('../fonts/NIAGSOL.TTF');
-  font-family: 'Centaur';
-  src: url('../fonts/CENTAUR.TTF');
+	font-family: 'Niagara Solid';
+	src: url('../fonts/NIAGSOL.TTF');
+	font-family: 'Centaur';
+	src: url('../fonts/CENTAUR.TTF');
 
 }
 
-body {
-  background-image: url('../images/Camel Rides.jpg');
-  background-size: cover;
-  position: relative;
-  height: 100vh;
-  height: auto;
-  width: auto;
+body
+{
+	background-image: url('../images/Camel Rides.jpg');
+	background-size: cover;
+	margin: 0;
+	padding: 0;
 }
 
 body::before
 {
-  content: '';
-  background-color: rgba(166, 202, 221, 0.20);
-  /* transparent black */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
+	content: '';
+	background-color: rgba(0, 0, 0, 0.10);
+	/* transparent black */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
 }
 header
 {
 	text-align: center;
-	font-family: 'Niagara Solid', cursive;
+	font-family: 'Niagara Solid',cursive;
 	color: white;
+	font-style: normal;
+	font-weight: 400;
 }
+	
 
 main
 {
-	height: 100%;
-	background: #FFFFFF 0% 0% no-repeat padding-box;
 	display: flex;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	opacity: 0.9;
+	margin-left:610px;
+	margin-right: 610px;
 	justify-content: center;
-	align-items: center;
-	opacity: 75%;
+
 }
 a {
   text-decoration: none;
@@ -59,7 +62,13 @@ a:hover {
 }
 
 .logo h1 {
+	
 	display: inline-block;
+	text-align: center;
+	font-family: 'Niagara Solid', cursive;
+	color: white;
+	font-style: normal;
+	font-weight: 400;
 	padding-left: 10px;
 	padding-top: 40px;
 	vertical-align: middle;

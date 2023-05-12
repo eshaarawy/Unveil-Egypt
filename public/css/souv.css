@@ -9,15 +9,14 @@
 
 body {
   background-image: url('../images/Camel Rides.jpg');
-    background-size: cover;
-    position: relative;
-    margin: 0;
+  background-size: cover;
+  margin: 0;
   padding: 0;
 }
 body::before
 {
   content: '';
-  background-color: rgba(255, 255, 255, 0.80);
+  background-color: rgba(166, 202, 221, 0.65);
   /* transparent black */
   position: absolute;
   top: 0;
@@ -26,12 +25,7 @@ body::before
   right: 0;
 }
 
-header {
-  background-color: #e6e6e6;
-  padding: 20px;
-  text-align: center;
-  opacity: 0.2;
-}
+
 
 .header {
   /*background-color: #f2f2f2;*/
@@ -45,6 +39,7 @@ header {
 
 .headline {
   font-size: 40px;
+  font: normal normal bold Tw Cen MT;
   color: black;
   text-align: center;
   padding-top: 10px;
@@ -52,39 +47,40 @@ header {
   position: relative;
 }
 
-p {
-  font-size: 20px;
-  margin-right: 15px;
-}
+
 
 .logo {
   display: inline-block;
+
 }
 
 .logo img {
   display: inline-block;
   vertical-align: middle;
-  height: 50px;
-  margin-right: 10px;
+
 }
 
 .logo h1 {
   display: inline-block;
   vertical-align: middle;
-  font-size: 20px;
   margin: 0;
+  font-family: 'Niagara Solid', cursive;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  font-size: 60px;
 }
 
 main {
-  margin-top: 100px;
   padding: 20px;
 }
 
 .row {
-  margin-bottom: 20px;
+  margin-top: 50px;
   display: inline-grid;
-  alignment: center;
+  vertical-align: middle;
   width: 1200px;
+  font-size: 20px;
 
 }
 
@@ -107,7 +103,7 @@ main {
 }
 .star {
   font-size: 30px;
-  color: #ccc;
+  color: white;
   cursor: pointer;
 }
 
