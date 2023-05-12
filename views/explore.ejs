@@ -13,7 +13,7 @@
         <div id="form">
             <form class="row d-flex justify-content-center" action="">
               <div class=col-lg-2>
-                <label class="first" for="salary">Salary</label>
+                <label class="first" for="salary">Salary in $</label>
                 <input class="n1" type="number" name="salary" id="salary"  placeholder="Payment range"  />
               </div>
               <div class=col-lg-2>
@@ -22,7 +22,16 @@
               </div>
               <div class="col-lg-2">
                 <label class="email" for="city">City</label>
-                <input class="emailbox" type="search" name="City" id="city" required placeholder="Choose City" />
+                <select required class="emailbox" name="City" id="city">
+                  <option disabled selected value value="">Choose city</option>
+                  <option id="Choose city" value="Cairo"> Cairo</option>
+                  <option id="Choose city" value="Alexandria"> Alexandria</option>
+                  <option id="Choose city" value="Dahab"> Dahab</option>
+                  <option id="Choose city" value="Sharm El-Sheikh"> Sharm El-Sheikh</option>
+                  <option id="Choose city" value="Luxor & Aswan"> Luxor & Aswan</option>
+
+                </select>
+    
               </div>
               <div class="col-lg-2">
                 <label class="gender">Gender</label>

@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+@font-face
+{
+  font-family: 'Niagara Solid';
+  src: url('../fonts/NIAGSOL.TTF');
+  font-family: 'Centaur';
+  src: url('../fonts/CENTAUR.TTF');
 }
-
 
 * {
   box-sizing: border-box;
@@ -39,12 +38,17 @@ body::before
 
 }
 
-
+header
+{
+  height: 150px;
+}
 
 .nav-item
 {
   margin-left: 5px;
+  margin-top: 12px;
   font-family: 'Centaur', serif;
+  font-size: 22px;
 }
 
 .d-inline-block
@@ -59,20 +63,10 @@ body::before
   font-style: normal;
   font-weight: 400;
   color: white;
-  font-size: 50px;
+  font-size: 60px;
 }
 
-.text1 {
-  font-size: 48;
-  color: black;
-  text-align: center;
-  padding-top: 100;
-  font-family: 'Centaur', serif;
-  font-weight: bold;
-  position: relative;
 
-
-}
 
 .wrapper{
   display: flex;
@@ -81,7 +75,7 @@ body::before
   padding-left: 350px;
 }
 .wrapper i{
-  top: 60%;
+  top: 50%;
   height: 44px;
   width: 44px;
   color: #343F4F;
@@ -105,9 +99,6 @@ body::before
   left: 327px;
   z-index: 2;
   display: block;
-
-
-
 }
 .wrapper i:last-child{
   right: -22px;
@@ -129,20 +120,20 @@ body::before
   display: inline-block;
   object-fit: cover;
   user-select: none;
-  height: 500px;
+  height: 700px;
   width: 100%;
   text-align: center;
 
 }
 .imgDiv p{
 /*  display: none;*/
-font-size: 22px;
+margin-top: 35px;
+font: normal normal bold Tw Cen MT;
+font-size: 35px;
 color: black;
 font-weight: bold;
 }
-.carousel{
 
-}
 .carousel.dragging img{
   pointer-events: none;
 }
@@ -153,7 +144,6 @@ font-weight: bold;
   height: 460px;
   width: 98%;
   border-radius: 32px;
-
 }
 .carousel img:first-child{
   margin-left: 0px;

@@ -186,10 +186,6 @@ const fast = [
 		bold: "Subway:",
 		text: "",
 		location: "Located in Zamalek, Downtown Cairo, Heliopolis, Nasr City, Maadi, 6th of October City, and more."
-	}, {
-		bold: "Pizza Inn:",
-		text: "",
-		location: "Located in Heliopolis, Nasr City, Maadi, 6th of October City, and more."
 	}
 ];
 
