@@ -173,3 +173,6 @@ input
   margin-left: 250px;
   margin-bottom: 10px;
 }
+.city {
+    display: none;
+ }

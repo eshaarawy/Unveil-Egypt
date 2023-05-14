@@ -1,6 +1,7 @@
+// Importing Requried Libraries and installations
 const express = require("express");
 const bodyParser = require("body-parser");
-const {tourist, tour, rate} = require("./mongodb");
+const {tourist, tour} = require("./mongodb");
 const {historical, souv, traditional, fancy, religious, park, nile, folk, fast} = require("./text");
 let alert = require('alert');
 
@@ -13,9 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-// GET REQUESTS
 
-app.get("/", function (req, res) {
+// GET REQUESTS
+app.get("/", function (req, res) { // home page
 	res.render("home", {signed: signed, username: username});
 });
 
@@ -26,7 +27,7 @@ app.get("/text", function(req, res){
 	})
 })
 
-app.get("/city", function(req, res){
+app.get("/city", function(req, res){ //Search for city results page
 	if (city == "Luxor & Aswan")
 		city_path = "Luxor";
 	else {
@@ -35,15 +36,15 @@ app.get("/city", function(req, res){
 	res.render("cities", {username: username, signed: signed, city: city, city_path: city_path});
 })
 
-app.get("/activities", function(req, res){
+app.get("/activities", function(req, res){ //Activities Page
 	res.render("activities", {signed: signed, username: username});
 })
 
-app.get("/monuments", function(req, res){
+app.get("/monuments", function(req, res){ //Monuments Page
 	res.render("monuments", {signed: signed, username: username});
 })
 
-app.get("/historical-monuments", function(req, res){
+app.get("/historical-monuments", function(req, res){ //Historical Places page
 	res.render("text", {
 		title: "Historical Monuments",
 		listItems: historical,
@@ -52,7 +53,7 @@ app.get("/historical-monuments", function(req, res){
 	})
 });
 
-app.get("/religious-monuments", function(req, res){
+app.get("/religious-monuments", function(req, res){ //Religious Places page
 	res.render("text", {
 		title: "Religious Monuments",
 		listItems: religious,
@@ -61,7 +62,7 @@ app.get("/religious-monuments", function(req, res){
 	})
 })
 
-app.get("/nile", function(req, res){
+app.get("/nile", function(req, res){ //Nile River Cruising Places page
 	res.render("text", {
 		title: "Nile River Cruising",
 		listItems: nile,
@@ -70,7 +71,7 @@ app.get("/nile", function(req, res){
 	})
 })
 
-app.get("/sovenirs", function(req, res){
+app.get("/sovenirs", function(req, res){ //Sovenirs Places page
 	res.render("text", {
 		title: "Sovenirs",
 		listItems: souv,
@@ -79,7 +80,7 @@ app.get("/sovenirs", function(req, res){
 	})
 });
 
-app.get("/parks", function(req, res){
+app.get("/parks", function(req, res){ //Park places page
 	res.render("text", {
 		title: "Visiting Parks",
 		listItems: park,
@@ -88,7 +89,7 @@ app.get("/parks", function(req, res){
 	})
 })
 
-app.get("/folks", function(req, res){
+app.get("/folks", function(req, res){ //Attending Folks places page
 	res.render("text", {
 		title: "Attending Folks Shows",
 		listItems: folk,
@@ -97,7 +98,7 @@ app.get("/folks", function(req, res){
 	})
 })
 
-app.get("/fancy", function(req, res){
+app.get("/fancy", function(req, res){ //Fancy restaurants places
 	res.render("text", {
 		title: "Fancy Food",
 		listItems: fancy,
@@ -106,7 +107,7 @@ app.get("/fancy", function(req, res){
 	})
 })
 
-app.get("/fast", function(req, res){
+app.get("/fast", function(req, res){ //Fast restaurants places
 	res.render("text", {
 		title: "Fast Food",
 		listItems: fast,
@@ -115,7 +116,7 @@ app.get("/fast", function(req, res){
 	})
 })
 
-app.get("/traditional", function(req, res){
+app.get("/traditional", function(req, res){ //Traditional restaurants places
 	res.render("text", {
 		title: "Traditional Food",
 		listItems: traditional,
@@ -124,31 +125,31 @@ app.get("/traditional", function(req, res){
 	})
 })
 
-app.get("/restaurants", function(req, res){
+app.get("/restaurants", function(req, res){ //restaurants page
 	res.render("rest-slider", {signed: signed, username: username});
 })
 
-app.get("/travel-tips", function(req, res){
+app.get("/travel-tips", function(req, res){ //Travel Tips
 	res.render("travel-tips", {signed: signed, username: username});
 })
 
-app.get("/login", function(req, res){
+app.get("/login", function(req, res){ //Login Page
 	res.render("login", {signed: signed, username: username});
 })
 
-app.get("/register", function(req, res){
+app.get("/register", function(req, res){ //Register as tourist or as a tour guide?
 	res.render("register", {signed: signed, username: username});
 })
 
-app.get("/register/tourguide", function(req, res){
+app.get("/register/tourguide", function(req, res){ //TourGuide Registraion
 	res.render("tour-guide", {signed: signed, username: username});
 })
 
-app.get("/register/tourist", function(req, res){
+app.get("/register/tourist", function(req, res){ //tourist Registration
 	res.render("tourist", {signed: signed, username: username});
 })
 
-app.get("/request-guide", function(req, res){
+app.get("/request-guide", function(req, res){ //Search for tourguide
 	if (signed)
 		res.render("explore", {signed: signed, username: username});
 	else {
@@ -156,14 +157,14 @@ app.get("/request-guide", function(req, res){
 	}
 })
 
-app.get("/signout", function(req, res){
+app.get("/signout", function(req, res){ //Signout
 	signed = false;
 	username = '';
 	res.redirect("/");
 })
 // POST REQUESTS
 
-app.post("/tourist-signup", async(req, res)=>{
+app.post("/tourist-signup", async(req, res)=>{ //Inserting tourist data into database
 	const data = {
 		first: req.body.first,
 		last: req.body.last,
@@ -178,7 +179,7 @@ app.post("/tourist-signup", async(req, res)=>{
 	res.render("home");
 })
 
-app.post("/guide-signup", async(req, res)=>{
+app.post("/guide-signup", async(req, res)=>{ //Inserting tourguide data into database
 	const data = {
 		first: req.body.first,
 		last: req.body.last,
@@ -193,7 +194,7 @@ app.post("/guide-signup", async(req, res)=>{
 	res.render("home", {signed: signed, username: username});
 })
 
-app.post("/login", async (req, res)=>{
+app.post("/login", async (req, res)=>{ //Loging search in database.
 	try {
 		const check= await tourist.findOne({mail: req.body.mail})
 
@@ -211,7 +212,7 @@ app.post("/login", async (req, res)=>{
 	}
 })
 
-app.post("/explore", function(req, res){
+app.post("/explore", function(req, res){ //Searching for tourguide in database
 	const salary = req.body.salary;
 	const age = req.body.age;
 	const city = req.body.City;
@@ -228,11 +229,11 @@ app.post("/explore", function(req, res){
 			})
 });
 
-app.post("/", function(req, res){
+app.post("/", function(req, res){ //Searching for city in home page
   city = req.body.city;
   res.redirect("/city");
 });
 
-app.listen(3000, function(){
+app.listen(3000, function(){ //Listening on port 3000 locally
 	console.log("Listening on Port 3000");
 });

@@ -1,11 +1,46 @@
 <%- include('partials/header'); -%>
+<script>
+        function filterItems() {
+            // Get input value and convert it to lowercase
+            var input = document.getElementById('search-bar').value.toLowerCase();
+            
+            // Get all items to filter
+            var cities = document.getElementsByClassName('city');
+
+            // Iterate through each item
+            for (var i = 0; i < cities.length; i++) {
+                var city = cities[i];
+                var text = city.innerText.toLowerCase();
+
+                // Check if the item's text starts with the input value
+                if (text.startsWith(input)) {
+                    city.style.display = 'block';
+                } else {
+                    city.style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+<style>
+  .city {
+        display: none;
+      }
+</style>
 
 <h1>Plan Your Dream Trip!</h1>
 <!-- Search Bar -->
 <div class="search-container">
   <img src="images/icons/search.png" alt="Logo" width="50" height="50" class="search_img">
   <form id="search-form" action="#" method="post">
-    <input type="text" id="search-input" name="city" placeholder="Search for Cities">
+    <input type="text" id="search-bar" oninput="filterItems()" name="city" placeholder="Search for Cities">
+    <ul>
+        <li class="city">Alexandria</li>
+        <li class="city">Cairo</li>
+        <li class="city">Dahab</li>
+        <li class="city">aaaaa</li>
+        <li class="city">bbbb</li>
+    </ul>
     <input id="submit-btn" type="submit" style="display:none">
   </form>
 </div>

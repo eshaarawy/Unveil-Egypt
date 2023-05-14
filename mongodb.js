@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/users", {
+mongoose.connect("mongodb://127.0.0.1:27017/users", { //Connecting with local database
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
@@ -12,7 +12,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/users", {
   console.log("Failed to connect");
 });
 
-const touristSchema = new mongoose.Schema({
+const touristSchema = new mongoose.Schema({ //Creating new schema for tourist
   first: {
     type: String,
     required: true
@@ -43,7 +43,7 @@ const touristSchema = new mongoose.Schema({
   }
 });
 
-const guideSchema = new mongoose.Schema({
+const guideSchema = new mongoose.Schema({ //Creating new schema for tourguide
   first: {
     type: String,
     required: true
@@ -74,23 +74,12 @@ const guideSchema = new mongoose.Schema({
   }
 });
 
-const rateSchema = new mongoose.Schema({
-  place: {
-    type: String,
-    required: true
-  },
-  rate:{
-    type: Number,
-    required: true
-  }
-});
-
+//Creating collection models
 const tourist = new mongoose.model("Tourist", touristSchema);
 const tour = new mongoose.model("Tour", guideSchema);
-const rate = new mongoose.model("Model", rateSchema);
 
+//Exporting tot app.js file
 module.exports = {
   tourist,
-  tour,
-  rate
+  tour
 };
