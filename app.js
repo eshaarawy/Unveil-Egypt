@@ -176,7 +176,7 @@ app.post("/tourist-signup", async(req, res)=>{ //Inserting tourist data into dat
 	}
 
 	await tourist.insertMany([data])
-	res.render("home");
+	res.render("home", {signed: signed, username: username});
 })
 
 app.post("/guide-signup", async(req, res)=>{ //Inserting tourguide data into database

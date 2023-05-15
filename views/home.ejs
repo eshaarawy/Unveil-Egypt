@@ -1,26 +1,5 @@
 <%- include('partials/header'); -%>
-<script>
-        function filterItems() {
-            // Get input value and convert it to lowercase
-            var input = document.getElementById('search-bar').value.toLowerCase();
-            
-            // Get all items to filter
-            var cities = document.getElementsByClassName('city');
 
-            // Iterate through each item
-            for (var i = 0; i < cities.length; i++) {
-                var city = cities[i];
-                var text = city.innerText.toLowerCase();
-
-                // Check if the item's text starts with the input value
-                if (text.startsWith(input)) {
-                    city.style.display = 'block';
-                } else {
-                    city.style.display = 'none';
-                }
-            }
-        }
-    </script>
 
 <style>
   .city {
@@ -32,18 +11,103 @@
 <!-- Search Bar -->
 <div class="search-container">
   <img src="images/icons/search.png" alt="Logo" width="50" height="50" class="search_img">
-  <form id="search-form" action="#" method="post">
+  <form id="search-form" action="/" method="post">
     <input type="text" id="search-bar" oninput="filterItems()" name="city" placeholder="Search for Cities">
-    <ul>
+    <ul class="list">
         <li class="city">Alexandria</li>
         <li class="city">Cairo</li>
         <li class="city">Dahab</li>
-        <li class="city">aaaaa</li>
-        <li class="city">bbbb</li>
+        <li class="city">Luxor & Aswan</li>
+        <li class="city">Sharm El-Sheikh</li>
     </ul>
     <input id="submit-btn" type="submit" style="display:none">
   </form>
 </div>
+
+<script>
+    const form = document.getElementById('search-form');
+    const input = document.getElementById('search-bar');
+    const submitBtn = document.getElementById('submit-btn');
+    var isSearch = false;
+    // Add event listener for enter key press
+    input.addEventListener('keyup', function (event){
+      if (event.key === 'Enter'){
+        event.preventDefault();
+        var inputt = document.getElementById('search-bar').value.toLowerCase();
+        var isSearch = false;
+        var myList = document.getElementsByClassName('list')[0];
+
+        myList.querySelectorAll('li').forEach(function(item) {
+            if (item.innerHTML.toLowerCase() == inputt){
+              isSearch = true;
+            }
+            else {
+              isSearch = false;
+            }
+          });
+
+        if (isSearch){
+          submitBtn.click();
+          isSearch = false;
+        }
+
+      }
+    });
+
+
+    var resultsFound = false;
+    var isNoResult = false;
+    function filterItems() {
+        // Get input value and convert it to lowercase
+        var inputtt = document.getElementById('search-bar').value.toLowerCase();
+
+        // Get all items to filter
+        var cities = document.getElementsByClassName('city');
+
+        // Reset results found variable
+
+        var any = false;
+        // Iterate through each item
+        for (var i = 0; i < cities.length; i++) {
+            var city = cities[i];
+            var text = city.innerText.toLowerCase();
+            // Check if the item's text starts with the input value
+            if (text.startsWith(inputtt)) {
+                city.style.display = 'block';
+                resultsFound = true;
+                any = true;
+            } else {
+                city.style.display = 'none';
+            }
+        }
+        if (!any)
+          resultsFound = false;
+
+        // If no results were found, display "No results"
+        if (!resultsFound && !isNoResult) {
+            var list = document.getElementsByClassName('list')[0];
+            var noResults = document.createElement('li');
+            noResults.innerText = 'No results';
+            list.appendChild(noResults);
+            isNoResult = true;
+        }
+
+        if (isNoResult && resultsFound){
+            var myList = document.getElementsByClassName('list')[0];
+            var items = document.querySelectorAll('li');
+            var length = document.querySelectorAll('li').length;
+
+            myList.querySelectorAll('li').forEach(function(item) {
+                if (item.innerHTML == 'No results')
+                  item.remove();
+              });
+              isNoResult = false;
+            }
+    }
+</script>
+
+
+
 
 <!-- Lower Buttons -->
 <div>
@@ -66,7 +130,6 @@
   </a>
 </div>
 <link rel="stylesheet" href="/css/home.css">
-<script src="main.js"></script>
 
 
 <%- include('partials/footer'); -%>
